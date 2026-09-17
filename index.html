@@ -14,27 +14,29 @@
 <meta name="description" content="One-to-one online Spanish tutoring for students at Paris international schools. IB, AP, A-Level and IGCSE, with a focus on oral exam preparation. First 20 minutes free.">
 <meta name="robots" content="index, follow">
 
-<!-- SITE_URL — the one constant every absolute URL below is built from.
-     Meta tags are read by scrapers that don't execute JS, so this can't
-     be a live JS variable — it's a single string to find-and-replace in
-     this block (canonical, og:url, og:image, twitter:image) if the
-     domain ever changes. Currently: https://francolocane.com/ -->
-<link rel="canonical" href="https://francolocane.com/">
+<!-- SITE_URL — canonical, og:url, og:image and twitter:image below are
+     generated from site.config.json's "siteUrl", the single source of
+     truth (qr/generate-qr.js reads the same file). Meta tags are read by
+     scrapers that don't execute JS, so they can't be live JS variables —
+     instead, edit site.config.json and run `npm run apply-site-url` to
+     regenerate this block. Do not hand-edit the four tags below; the
+     next apply-site-url run will overwrite them. -->
+<link rel="canonical" href="https://franco2locane-creator.github.io/spanish-tutor-landing/">
 
 <!-- Open Graph — this link gets forwarded in WhatsApp groups -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Franco Locane — Spanish Tutoring">
 <meta property="og:title" content="Franco Locane — Spanish Tutoring, Paris">
 <meta property="og:description" content="One-to-one online Spanish tutoring for students at Paris international schools. IB, AP, A-Level and IGCSE, with a focus on oral exam preparation. First 20 minutes free.">
-<meta property="og:image" content="https://francolocane.com/assets/og-image.png">
+<meta property="og:image" content="https://franco2locane-creator.github.io/spanish-tutor-landing/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Franco Locane — Spanish Tutoring, Paris">
-<meta property="og:url" content="https://francolocane.com/">
+<meta property="og:url" content="https://franco2locane-creator.github.io/spanish-tutor-landing/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Franco Locane — Spanish Tutoring, Paris">
 <meta name="twitter:description" content="One-to-one online Spanish tutoring for students at Paris international schools. Oral exam preparation for IB, AP, A-Level and IGCSE.">
-<meta name="twitter:image" content="https://francolocane.com/assets/og-image.png">
+<meta name="twitter:image" content="https://franco2locane-creator.github.io/spanish-tutor-landing/assets/og-image.png">
 
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 

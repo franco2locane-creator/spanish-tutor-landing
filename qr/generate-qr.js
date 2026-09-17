@@ -2,10 +2,12 @@
 // Generates the print QR code for the flyer from the landing page's
 // final URL. Usage:
 //
-//   node qr/generate-qr.js https://spanish-with-franco.example/
+//   node qr/generate-qr.js https://example.com/
 //
-// With no argument, falls back to a placeholder URL — replace it with
-// the real deployed URL before printing anything.
+// With no argument, defaults to site.config.json's "siteUrl" — the same
+// constant index.html's meta tags are built from (see
+// scripts/apply-site-url.js). Update that one file when the URL changes,
+// rather than passing it here each time.
 //
 // Outputs, both into /qr:
 //   qr-code.svg   — vector, use this on the flyer
@@ -15,12 +17,11 @@
 const path = require("path");
 const QRCode = require("qrcode");
 
-const DEFAULT_URL = "https://spanish-with-franco.example/";
-const url = process.argv[2] || DEFAULT_URL;
+const { siteUrl } = require("../site.config.json");
+const url = process.argv[2] || siteUrl;
 
 if (!process.argv[2]) {
-  console.warn(`No URL given — using placeholder: ${DEFAULT_URL}`);
-  console.warn("Re-run with the real deployed URL before printing.\n");
+  console.warn(`No URL given — using site.config.json: ${siteUrl}`);
 }
 
 const options = {

@@ -1,0 +1,16 @@
+{
+  "name": "spanish-tutor-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page and print QR code for Franco Locane's Spanish tutoring flyer.",
+  "scripts": {
+    "generate-qr": "node qr/generate-qr.js",
+    "generate-webp": "node scripts/generate-webp.js"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.4"
+  }
+}
